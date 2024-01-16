@@ -12,8 +12,11 @@ export function solution(A: number[], K: number): number[] {
     //     K--;
     // }
     // return A;
-
     //Solution-2
+    // let items = A.splice(0,K));
+    //A.push(...items)
+
+    //Solution-3
     const B: number[] = [];
     K = K%A.length; ///Since K can be larger than A.length
 
@@ -21,6 +24,8 @@ export function solution(A: number[], K: number): number[] {
         B[getIndex(i,K, A.length)] = A[i];
     }
     return B;
+    //Solution-4
+    // reverse 3 times (full, then 0 to k-1, then k to N-1)
 }
 
 function getIndex(index: number, num: number, maxLen: number):number{
